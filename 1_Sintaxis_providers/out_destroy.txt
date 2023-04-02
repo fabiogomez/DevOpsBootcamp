@@ -1,0 +1,156 @@
+azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp]
+azurerm_storage_account.teststorage: Refreshing state... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp/providers/Microsoft.Storage/storageAccounts/appfg28teststorage]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.rg will be destroyed
+  - resource "azurerm_resource_group" "rg" {
+      - id       = "/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp" -> null
+      - location = "westeurope" -> null
+      - name     = "dobootcamp" -> null
+      - tags     = {
+          - "APPID"          = "MSDN"
+          - "BILLINGCODE"    = "MSDN"
+          - "CMS"            = "US-ITS"
+          - "COUNTRY"        = "US"
+          - "CSCLASS"        = "CON"
+          - "CSQUAL"         = "Intellectual Property"
+          - "CSTYPE"         = "Deloitte"
+          - "ENVIRONMENT"    = "SBX"
+          - "FUNCTION"       = "SVC"
+          - "GROUPCONTACT"   = "fgomezguzman@deloitte.com"
+          - "MEMBERFIRM"     = "US"
+          - "PRIMARYCONTACT" = "fgomezguzman@deloitte.com"
+        } -> null
+    }
+
+  # azurerm_storage_account.teststorage will be destroyed
+  - resource "azurerm_storage_account" "teststorage" {
+      - access_tier                       = "Hot" -> null
+      - account_kind                      = "StorageV2" -> null
+      - account_replication_type          = "LRS" -> null
+      - account_tier                      = "Standard" -> null
+      - allow_nested_items_to_be_public   = true -> null
+      - cross_tenant_replication_enabled  = true -> null
+      - default_to_oauth_authentication   = false -> null
+      - enable_https_traffic_only         = true -> null
+      - id                                = "/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp/providers/Microsoft.Storage/storageAccounts/appfg28teststorage" -> null      
+      - infrastructure_encryption_enabled = false -> null
+      - is_hns_enabled                    = false -> null
+      - location                          = "westeurope" -> null
+      - min_tls_version                   = "TLS1_2" -> null
+      - name                              = "appfg28teststorage" -> null
+      - nfsv3_enabled                     = false -> null
+      - primary_access_key                = (sensitive value)
+      - primary_blob_connection_string    = (sensitive value)
+      - primary_blob_endpoint             = "https://appfg28teststorage.blob.core.windows.net/" -> null
+      - primary_blob_host                 = "appfg28teststorage.blob.core.windows.net" -> null
+      - primary_connection_string         = (sensitive value)
+      - primary_dfs_endpoint              = "https://appfg28teststorage.dfs.core.windows.net/" -> null
+      - primary_dfs_host                  = "appfg28teststorage.dfs.core.windows.net" -> null
+      - primary_file_endpoint             = "https://appfg28teststorage.file.core.windows.net/" -> null
+      - primary_file_host                 = "appfg28teststorage.file.core.windows.net" -> null
+      - primary_location                  = "westeurope" -> null
+      - primary_queue_endpoint            = "https://appfg28teststorage.queue.core.windows.net/" -> null
+      - primary_queue_host                = "appfg28teststorage.queue.core.windows.net" -> null
+      - primary_table_endpoint            = "https://appfg28teststorage.table.core.windows.net/" -> null
+      - primary_table_host                = "appfg28teststorage.table.core.windows.net" -> null
+      - primary_web_endpoint              = "https://appfg28teststorage.z6.web.core.windows.net/" -> null
+      - primary_web_host                  = "appfg28teststorage.z6.web.core.windows.net" -> null
+      - public_network_access_enabled     = true -> null
+      - queue_encryption_key_type         = "Service" -> null
+      - resource_group_name               = "dobootcamp" -> null
+      - secondary_access_key              = (sensitive value)
+      - secondary_connection_string       = (sensitive value)
+      - sftp_enabled                      = false -> null
+      - shared_access_key_enabled         = true -> null
+      - table_encryption_key_type         = "Service" -> null
+      - tags                              = {
+          - "APPID"          = "MSDN"
+          - "BILLINGCODE"    = "MSDN"
+          - "CMS"            = "US-ITS"
+          - "COUNTRY"        = "US"
+          - "CSCLASS"        = "CON"
+          - "CSQUAL"         = "Intellectual Property"
+          - "CSTYPE"         = "Deloitte"
+          - "FUNCTION"       = "SVC"
+          - "GROUPCONTACT"   = "fgomezguzman@deloitte.com"
+          - "MEMBERFIRM"     = "US"
+          - "PRIMARYCONTACT" = "fgomezguzman@deloitte.com"
+          - "environment"    = "SBX"
+        } -> null
+
+      - blob_properties {
+          - change_feed_enabled           = false -> null
+          - change_feed_retention_in_days = 0 -> null
+          - last_access_time_enabled      = false -> null
+          - versioning_enabled            = false -> null
+        }
+
+      - network_rules {
+          - bypass                     = [
+              - "AzureServices",
+            ] -> null
+          - default_action             = "Allow" -> null
+          - ip_rules                   = [] -> null
+          - virtual_network_subnet_ids = [] -> null
+        }
+
+      - queue_properties {
+
+          - hour_metrics {
+              - enabled               = true -> null
+              - include_apis          = true -> null
+              - retention_policy_days = 7 -> null
+              - version               = "1.0" -> null
+            }
+
+          - logging {
+              - delete                = false -> null
+              - read                  = false -> null
+              - retention_policy_days = 0 -> null
+              - version               = "1.0" -> null
+              - write                 = false -> null
+            }
+
+          - minute_metrics {
+              - enabled               = false -> null
+              - include_apis          = false -> null
+              - retention_policy_days = 0 -> null
+              - version               = "1.0" -> null
+            }
+        }
+
+      - share_properties {
+
+          - retention_policy {
+              - days = 7 -> null
+            }
+        }
+    }
+
+Plan: 0 to add, 0 to change, 2 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+azurerm_storage_account.teststorage: Destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp/providers/Microsoft.Storage/storageAccounts/appfg28teststorage]
+azurerm_storage_account.teststorage: Destruction complete after 9s
+azurerm_resource_group.rg: Destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 10s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 20s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 30s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 40s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 50s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 1m0s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 1m10s elapsed]
+azurerm_resource_group.rg: Still destroying... [id=/subscriptions/95b8de13-fe46-419d-9492-35b76155e655/resourceGroups/dobootcamp, 1m20s elapsed]
+azurerm_resource_group.rg: Destruction complete after 1m22s
+
+Destroy complete! Resources: 2 destroyed.
