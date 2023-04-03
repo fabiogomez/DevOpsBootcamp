@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.48.0"
     }
   }
@@ -22,7 +22,7 @@ resource "azurerm_storage_account" "teststorage" {
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  
+
 
   tags = {
     environment = "dev"

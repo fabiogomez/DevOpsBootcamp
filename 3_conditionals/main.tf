@@ -1,14 +1,14 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.48.0"
     }
   }
 }
 
 locals {
-    prefix = "prex-"
+  prefix = "prex-"
 }
 
 provider "azurerm" {
@@ -19,8 +19,8 @@ resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
 }
-resource "azurerm_app_service_plan" "example" {  
-  name                = var.add_prefix ? format("%s%s",local.prefix,var.service_plan_name): var.service_plan_name 
+resource "azurerm_app_service_plan" "example" {
+  name                = var.add_prefix ? format("%s%s", local.prefix, var.service_plan_name) : var.service_plan_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -35,7 +35,7 @@ resource "azurerm_app_service_plan" "example" {
 }
 
 resource "azurerm_app_service" "example" {
-  count = var.deploy_app_service ? 1 : 0
+  count               = var.deploy_app_service ? 1 : 0
   name                = var.app_service_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -48,5 +48,5 @@ resource "azurerm_app_service" "example" {
 
   app_settings = var.app_settings
 
-  
+
 }

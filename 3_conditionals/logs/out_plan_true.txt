@@ -1,0 +1,179 @@
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_app_service.example[0] will be created
+  + resource "azurerm_app_service" "example" {
+      + app_service_plan_id               = (known after apply)
+      + app_settings                      = {
+          + "SOME_KEY1" = "value"
+          + "SOME_KEY2" = "value2"
+        }
+      + client_affinity_enabled           = false
+      + client_cert_enabled               = false
+      + client_cert_mode                  = (known after apply)
+      + custom_domain_verification_id     = (known after apply)
+      + default_site_hostname             = (known after apply)
+      + enabled                           = true
+      + https_only                        = false
+      + id                                = (known after apply)
+      + key_vault_reference_identity_id   = (known after apply)
+      + location                          = "westeurope"
+      + name                              = "example-app-service-fg28"
+      + outbound_ip_address_list          = (known after apply)
+      + outbound_ip_addresses             = (known after apply)
+      + possible_outbound_ip_address_list = (known after apply)
+      + possible_outbound_ip_addresses    = (known after apply)
+      + resource_group_name               = "ccbootcamp"
+      + site_credential                   = (known after apply)
+
+      + auth_settings {
+          + additional_login_params        = (known after apply)
+          + allowed_external_redirect_urls = (known after apply)
+          + default_provider               = (known after apply)
+          + enabled                        = (known after apply)
+          + issuer                         = (known after apply)
+          + runtime_version                = (known after apply)
+          + token_refresh_extension_hours  = (known after apply)
+          + token_store_enabled            = (known after apply)
+          + unauthenticated_client_action  = (known after apply)
+
+          + active_directory {
+              + allowed_audiences = (known after apply)
+              + client_id         = (known after apply)
+              + client_secret     = (sensitive value)
+            }
+
+          + facebook {
+              + app_id       = (known after apply)
+              + app_secret   = (sensitive value)
+              + oauth_scopes = (known after apply)
+            }
+
+          + google {
+              + client_id     = (known after apply)
+              + client_secret = (sensitive value)
+              + oauth_scopes  = (known after apply)
+            }
+
+          + microsoft {
+              + client_id     = (known after apply)
+              + client_secret = (sensitive value)
+              + oauth_scopes  = (known after apply)
+            }
+
+          + twitter {
+              + consumer_key    = (known after apply)
+              + consumer_secret = (sensitive value)
+            }
+        }
+
+      + connection_string {
+          + name  = (known after apply)
+          + type  = (known after apply)
+          + value = (sensitive value)
+        }
+
+      + logs {
+          + detailed_error_messages_enabled = (known after apply)
+          + failed_request_tracing_enabled  = (known after apply)
+
+          + application_logs {
+              + file_system_level = (known after apply)
+
+              + azure_blob_storage {
+                  + level             = (known after apply)
+                  + retention_in_days = (known after apply)
+                  + sas_url           = (sensitive value)
+                }
+            }
+
+          + http_logs {
+              + azure_blob_storage {
+                  + retention_in_days = (known after apply)
+                  + sas_url           = (sensitive value)
+                }
+
+              + file_system {
+                  + retention_in_days = (known after apply)
+                  + retention_in_mb   = (known after apply)
+                }
+            }
+        }
+
+      + site_config {
+          + acr_use_managed_identity_credentials = false
+          + always_on                            = false
+          + dotnet_framework_version             = "v4.0"
+          + ftps_state                           = (known after apply)
+          + http2_enabled                        = false
+          + ip_restriction                       = (known after apply)
+          + linux_fx_version                     = (known after apply)
+          + local_mysql_enabled                  = (known after apply)
+          + managed_pipeline_mode                = (known after apply)
+          + min_tls_version                      = (known after apply)
+          + number_of_workers                    = (known after apply)
+          + remote_debugging_enabled             = false
+          + remote_debugging_version             = (known after apply)
+          + scm_ip_restriction                   = (known after apply)
+          + scm_type                             = "LocalGit"
+          + scm_use_main_ip_restriction          = false
+          + vnet_route_all_enabled               = (known after apply)
+          + websockets_enabled                   = (known after apply)
+          + windows_fx_version                   = (known after apply)
+
+          + cors {
+              + allowed_origins     = (known after apply)
+              + support_credentials = (known after apply)
+            }
+        }
+
+      + source_control {
+          + branch             = (known after apply)
+          + manual_integration = (known after apply)
+          + repo_url           = (known after apply)
+          + rollback_enabled   = (known after apply)
+          + use_mercurial      = (known after apply)
+        }
+
+      + storage_account {
+          + access_key   = (sensitive value)
+          + account_name = (known after apply)
+          + mount_path   = (known after apply)
+          + name         = (known after apply)
+          + share_name   = (known after apply)
+          + type         = (known after apply)
+        }
+    }
+
+  # azurerm_app_service_plan.example will be created
+  + resource "azurerm_app_service_plan" "example" {
+      + id                           = (known after apply)
+      + kind                         = "Windows"
+      + location                     = "westeurope"
+      + maximum_elastic_worker_count = (known after apply)
+      + maximum_number_of_workers    = (known after apply)
+      + name                         = "prex-example-appserviceplan-fg28"
+      + resource_group_name          = "ccbootcamp"
+      + tags                         = {
+          + "environment" = "dev"
+        }
+
+      + sku {
+          + capacity = (known after apply)
+          + size     = "S1"
+          + tier     = "Standard"
+        }
+    }
+
+  # azurerm_resource_group.rg will be created
+  + resource "azurerm_resource_group" "rg" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "ccbootcamp"
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+╷

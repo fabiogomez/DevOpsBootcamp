@@ -1,0 +1,215 @@
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.app.azurerm_resource_group.rg will be created
+  + resource "azurerm_resource_group" "rg" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "mdlbootcamp"
+    }
+
+  # module.app.azurerm_service_plan.example will be created
+  + resource "azurerm_service_plan" "example" {
+      + id                           = (known after apply)
+      + kind                         = (known after apply)
+      + location                     = "westeurope"
+      + maximum_elastic_worker_count = (known after apply)
+      + name                         = "example-appserviceplan-fg28"
+      + os_type                      = "Windows"
+      + per_site_scaling_enabled     = false
+      + reserved                     = (known after apply)
+      + resource_group_name          = "mdlbootcamp"
+      + sku_name                     = "P1v2"
+      + worker_count                 = (known after apply)
+    }
+
+  # module.app.azurerm_windows_web_app.example["dotnet20"] will be created
+  + resource "azurerm_windows_web_app" "example" {
+      + client_affinity_enabled           = false
+      + client_certificate_enabled        = false
+      + client_certificate_mode           = "Required"
+      + custom_domain_verification_id     = (sensitive value)
+      + default_hostname                  = (known after apply)
+      + enabled                           = true
+      + https_only                        = false
+      + id                                = (known after apply)
+      + key_vault_reference_identity_id   = (known after apply)
+      + kind                              = (known after apply)
+      + location                          = "westeurope"
+      + name                              = "app3-fg28"
+      + outbound_ip_address_list          = (known after apply)
+      + outbound_ip_addresses             = (known after apply)
+      + possible_outbound_ip_address_list = (known after apply)
+      + possible_outbound_ip_addresses    = (known after apply)
+      + resource_group_name               = "mdlbootcamp"
+      + service_plan_id                   = (known after apply)
+      + site_credential                   = (known after apply)
+      + zip_deploy_file                   = (known after apply)
+
+      + site_config {
+          + always_on                               = true
+          + auto_heal_enabled                       = false
+          + container_registry_use_managed_identity = false
+          + default_documents                       = (known after apply)
+          + detailed_error_logging_enabled          = (known after apply)
+          + ftps_state                              = "Disabled"
+          + health_check_eviction_time_in_min       = (known after apply)
+          + http2_enabled                           = false
+          + ip_restriction                          = (known after apply)
+          + linux_fx_version                        = (known after apply)
+          + load_balancing_mode                     = "LeastRequests"
+          + local_mysql_enabled                     = false
+          + managed_pipeline_mode                   = "Integrated"
+          + minimum_tls_version                     = "1.2"
+          + remote_debugging_enabled                = false
+          + remote_debugging_version                = (known after apply)
+          + scm_ip_restriction                      = (known after apply)
+          + scm_minimum_tls_version                 = "1.2"
+          + scm_type                                = (known after apply)
+          + scm_use_main_ip_restriction             = false
+          + use_32_bit_worker                       = true
+          + vnet_route_all_enabled                  = false
+          + websockets_enabled                      = false
+          + windows_fx_version                      = (known after apply)
+          + worker_count                            = (known after apply)
+
+          + application_stack {
+              + current_stack                = (known after apply)
+              + dotnet_version               = "v2.0"
+              + java_embedded_server_enabled = (known after apply)
+              + php_version                  = (known after apply)
+              + python                       = false
+              + python_version               = (known after apply)
+            }
+        }
+    }
+
+  # module.app.azurerm_windows_web_app.example["dotnet30"] will be created
+  + resource "azurerm_windows_web_app" "example" {
+      + client_affinity_enabled           = false
+      + client_certificate_enabled        = false
+      + client_certificate_mode           = "Required"
+      + custom_domain_verification_id     = (sensitive value)
+      + default_hostname                  = (known after apply)
+      + enabled                           = true
+      + https_only                        = false
+      + id                                = (known after apply)
+      + key_vault_reference_identity_id   = (known after apply)
+      + kind                              = (known after apply)
+      + location                          = "westeurope"
+      + name                              = "app2-fg28"
+      + outbound_ip_address_list          = (known after apply)
+      + outbound_ip_addresses             = (known after apply)
+      + possible_outbound_ip_address_list = (known after apply)
+      + possible_outbound_ip_addresses    = (known after apply)
+      + resource_group_name               = "mdlbootcamp"
+      + service_plan_id                   = (known after apply)
+      + site_credential                   = (known after apply)
+      + zip_deploy_file                   = (known after apply)
+
+      + site_config {
+          + always_on                               = true
+          + auto_heal_enabled                       = false
+          + container_registry_use_managed_identity = false
+          + default_documents                       = (known after apply)
+          + detailed_error_logging_enabled          = (known after apply)
+          + ftps_state                              = "Disabled"
+          + health_check_eviction_time_in_min       = (known after apply)
+          + http2_enabled                           = false
+          + ip_restriction                          = (known after apply)
+          + linux_fx_version                        = (known after apply)
+          + load_balancing_mode                     = "LeastRequests"
+          + local_mysql_enabled                     = false
+          + managed_pipeline_mode                   = "Integrated"
+          + minimum_tls_version                     = "1.1"
+          + remote_debugging_enabled                = false
+          + remote_debugging_version                = (known after apply)
+          + scm_ip_restriction                      = (known after apply)
+          + scm_minimum_tls_version                 = "1.2"
+          + scm_type                                = (known after apply)
+          + scm_use_main_ip_restriction             = false
+          + use_32_bit_worker                       = true
+          + vnet_route_all_enabled                  = false
+          + websockets_enabled                      = false
+          + windows_fx_version                      = (known after apply)
+          + worker_count                            = (known after apply)
+
+          + application_stack {
+              + current_stack                = (known after apply)
+              + dotnet_version               = "v3.0"
+              + java_embedded_server_enabled = (known after apply)
+              + php_version                  = (known after apply)
+              + python                       = false
+              + python_version               = (known after apply)
+            }
+        }
+    }
+
+  # module.app.azurerm_windows_web_app.example["dotnet40"] will be created
+  + resource "azurerm_windows_web_app" "example" {
+      + client_affinity_enabled           = false
+      + client_certificate_enabled        = false
+      + client_certificate_mode           = "Required"
+      + custom_domain_verification_id     = (sensitive value)
+      + default_hostname                  = (known after apply)
+      + enabled                           = true
+      + https_only                        = false
+      + id                                = (known after apply)
+      + key_vault_reference_identity_id   = (known after apply)
+      + kind                              = (known after apply)
+      + location                          = "westeurope"
+      + name                              = "app1-fg28"
+      + outbound_ip_address_list          = (known after apply)
+      + outbound_ip_addresses             = (known after apply)
+      + possible_outbound_ip_address_list = (known after apply)
+      + possible_outbound_ip_addresses    = (known after apply)
+      + resource_group_name               = "mdlbootcamp"
+      + service_plan_id                   = (known after apply)
+      + site_credential                   = (known after apply)
+      + zip_deploy_file                   = (known after apply)
+
+      + site_config {
+          + always_on                               = true
+          + auto_heal_enabled                       = false
+          + container_registry_use_managed_identity = false
+          + default_documents                       = (known after apply)
+          + detailed_error_logging_enabled          = (known after apply)
+          + ftps_state                              = "Disabled"
+          + health_check_eviction_time_in_min       = (known after apply)
+          + http2_enabled                           = false
+          + ip_restriction                          = (known after apply)
+          + linux_fx_version                        = (known after apply)
+          + load_balancing_mode                     = "LeastRequests"
+          + local_mysql_enabled                     = false
+          + managed_pipeline_mode                   = "Integrated"
+          + minimum_tls_version                     = "1.2"
+          + remote_debugging_enabled                = false
+          + remote_debugging_version                = (known after apply)
+          + scm_ip_restriction                      = (known after apply)
+          + scm_minimum_tls_version                 = "1.2"
+          + scm_type                                = (known after apply)
+          + scm_use_main_ip_restriction             = false
+          + use_32_bit_worker                       = true
+          + vnet_route_all_enabled                  = false
+          + websockets_enabled                      = false
+          + windows_fx_version                      = (known after apply)
+          + worker_count                            = (known after apply)
+
+          + application_stack {
+              + current_stack                = (known after apply)
+              + dotnet_version               = "v4.0"
+              + java_embedded_server_enabled = (known after apply)
+              + php_version                  = (known after apply)
+              + python                       = false
+              + python_version               = (known after apply)
+            }
+        }
+    }
+
+Plan: 5 to add, 0 to change, 0 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
