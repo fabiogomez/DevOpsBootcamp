@@ -1,4 +1,4 @@
-az account set --subscription 95b8de13-fe46-419d-9492-35b76155e655
+az account set --subscription {id_subscription}
 terraform init
 terraform validate
 terraform plan
