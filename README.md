@@ -1,10 +1,10 @@
 # DevOpsBootcamp
 
 
-Install terraform
+Instalar terraform
 https://developer.hashicorp.com/terraform/downloads
 
-Install azure cli
+Instalar azure cli
 https://learn.microsoft.com/en-us/cli/azure/install-azure-cli
 
 Login en azure portal
@@ -44,7 +44,7 @@ terraform plan -var="var1=xxxx"
 ```
 
 
-Comandos para interactuar con el state
+###Comandos para interactuar con el state
 
 
 Listar los recursos en el state
