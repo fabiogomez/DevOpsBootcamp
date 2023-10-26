@@ -1,8 +1,29 @@
+az login
 az account set --subscription {id_subscription}
 terraform init
 terraform validate
 terraform plan
 terraform apply
 
+//plan using variables
 terraform plan -var-file="envdev.tfvars"
 terraform plan -var="var1=xxxx"
+
+//apply using files
+terraform plan -var-file="envdev.tfvars" -out=20231025.tfplan
+terrafrom apply 20231025.tfplan
+
+// workspaces commands
+terraform workspace list
+terraform workspace new 
+terraform workspace select
+
+
+terraform plan -target="module.monitoring_hola"
+
+terraform fmt
+terraform validate
+
+
+
+

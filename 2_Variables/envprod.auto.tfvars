@@ -4,3 +4,6 @@ storageaccountname       = "prdappfg28teststorage"
 account_tier             = "Premium"
 account_replication_type = "GRS"
 environment              = "prd"
+tags = {
+    env = "dev"
+}

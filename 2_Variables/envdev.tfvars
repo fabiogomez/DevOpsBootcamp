@@ -4,4 +4,7 @@ storageaccountname       = "devappfg28teststorage"
 account_tier             = "Standard"
 account_replication_type = "LRS"
 environment              = "dev"
+tags = {
+    env = "dev"
+}
 
